@@ -43,6 +43,7 @@ const (
 	InterfaceConstraint NetworkPolicyType = "InterfaceConstraint"
 	ProviderAddress     NetworkPolicyType = "ProviderAddress"
 	RemoteSubnetRoute   NetworkPolicyType = "RemoteSubnetRoute"
+	VxlanPort           NetworkPolicyType = "VxlanPort"
 	HostRoute           NetworkPolicyType = "HostRoute"
 	SetPolicy           NetworkPolicyType = "SetPolicy"
 	L4Proxy             NetworkPolicyType = "L4Proxy"
@@ -270,4 +271,9 @@ type L4ProxyPolicySetting struct {
 	Exceptions  []string     `json:",omitempty"`
 	Destination string
 	OutboundNAT bool         `json:",omitempty"`
-};
+}
+
+// VxlanPortPolicySetting allows configuring the VXLAN TCP port
+type VxlanPortPolicySetting struct {
+	Port uint16
+}

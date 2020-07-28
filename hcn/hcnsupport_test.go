@@ -127,6 +127,17 @@ func TestL4ProxyPolicySupport(t *testing.T){
 	}
 }
 
+func TestVxlanPortSupport(t *testing.T) {
+	supportedFeatures := GetSupportedFeatures()
+	err := VxlanPortSupported()
+	if supportedFeatures.VxlanPort && err != nil {
+		t.Fatal(err)
+	}
+	if !supportedFeatures.VxlanPort && err == nil {
+		t.Fatal(err)
+	}
+}
+
 func TestIsFeatureSupported(t *testing.T) {
 	// HNSVersion1803 testing (single range tests)
 	if isFeatureSupported(Version{Major: 0, Minor: 0}, HNSVersion1803) {

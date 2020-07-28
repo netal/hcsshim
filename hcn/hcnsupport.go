@@ -17,6 +17,7 @@ type SupportedFeatures struct {
 	IPv6DualStack            bool        `json:"IPv6DualStack"`
 	SetPolicy                bool        `json:"SetPolicy"`
 	L4Proxy					 bool        `json:"L4Proxy"`
+	VxlanPort                bool        `json:"VxlanPort"`
 }
 
 // AclFeatures are the supported ACL possibilities.
@@ -65,6 +66,7 @@ func GetSupportedFeatures() SupportedFeatures {
 	features.IPv6DualStack = isFeatureSupported(globals.Version, IPv6DualStackVersion)
 	features.SetPolicy = isFeatureSupported(globals.Version, SetPolicyVersion)
 	features.L4Proxy = isFeatureSupported(globals.Version, L4ProxyPolicyVersion)
+	features.VxlanPort = isFeatureSupported(globals.Version, VxlanPortVersion)
 
 	return features
 }
