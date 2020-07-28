@@ -58,6 +58,9 @@ var (
 	}
 	// HNS 13.0 allows for Set Policy support
 	SetPolicyVersion = VersionRanges{VersionRange{MinVersion: Version{Major: 13, Minor: 0}, MaxVersion: Version{Major: math.MaxInt32, Minor: math.MaxInt32}}}
+
+	//HNS 13.1 allows for L4Proxy Policy support
+	L4ProxyPolicyVersion = VersionRanges{VersionRange{MinVersion: Version{Major: 13, Minor: 1}, MaxVersion: Version{Major: math.MaxInt32, Minor: math.MaxInt32}}}
 )
 
 // GetGlobals returns the global properties of the HCN Service.
