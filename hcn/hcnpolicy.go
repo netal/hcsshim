@@ -142,8 +142,7 @@ type SDNRoutePolicySetting struct {
 	NeedEncap         bool   `json:",omitempty"`
 }
 
-// FiveTuple is nested in 
-PolicySetting for WFP support.
+// FiveTuple is nested in PolicySetting for WFP support.
 type FiveTuple struct {
 	Protocols       string `json:",omitempty"`
 	LocalAddresses  string `json:",omitempty"`
