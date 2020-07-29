@@ -133,7 +133,7 @@ func TestL4ProxyPolicySupport(t *testing.T){
 	if supportedFeatures.L4Proxy && err != nil {
 		t.Fatal(err)
 	}
-	if !supportedFeatures.L4Proxy && err ==nil {
+	if !supportedFeatures.L4Proxy && err == nil {
 		t.Fatal(err)
 	}
 }

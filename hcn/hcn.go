@@ -208,7 +208,7 @@ func IPv6DualStackSupported() error {
 }
 
 //L4proxySupported returns an error if the HCN verison does not support L4Proxy
-func L4proxyPolicySupported() erorr {
+func L4proxyPolicySupported() error {
 	supported := GetSupportedFeatures()
 	if supported.L4Proxy{
 		return nil
