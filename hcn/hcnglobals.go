@@ -64,7 +64,13 @@ var (
 	VxlanPortVersion = VersionRanges{VersionRange{MinVersion: Version{Major: 10, Minor: 3}, MaxVersion: Version{Major: math.MaxInt32, Minor: math.MaxInt32}}}
 
 	//HNS 13.1 allows for L4Proxy Policy support
-	L4ProxyPolicyVersion = VersionRanges{VersionRange{MinVersion: Version{Major: 13, Minor: 1}, MaxVersion: Version{Major: math.MaxInt32, Minor: math.MaxInt32}}}
+	L4ProxyPolicyVersion = VersionRanges{
+		VersionRange{MinVersion: Version{Major: 9, Minor: 5}, MaxVersion: Version{Major: math.MaxInt32, Minor: math.MaxInt32}},
+		VersionRange{MinVersion: Version{Major: 10, Minor: 5}, MaxVersion: Version{Major: math.MaxInt32, Minor: math.MaxInt32}},
+		VersionRange{MinVersion: Version{Major: 11, Minor: 11}, MaxVersion: Version{Major: math.MaxInt32, Minor: math.MaxInt32}},
+		VersionRange{MinVersion: Version{Major: 12, Minor: 1}, MaxVersion: Version{Major: math.MaxInt32, Minor: math.MaxInt32}},
+		VersionRange{MinVersion: Version{Major: 13, Minor: 1}, MaxVersion: Version{Major: math.MaxInt32, Minor: math.MaxInt32}},
+	}
 
 	//HNS 13.2 allows for L4WfpProxy Policy support
 	L4WfpProxyPolicyVersion = VersionRanges{VersionRange{MinVersion: Version{Major: 13, Minor: 2}, MaxVersion: Version{Major: math.MaxInt32, Minor: math.MaxInt32}}}
